@@ -16,4 +16,4 @@ Um sistema de gestão orçamentária e controle de gastos escrito em Python sob 
 
 Provavelmente não é a maneira mais prática ou simples para um iniciante, mas acaba por ser mais arrumado e apresentável do que uma planilha do Excel Infinita.
 
-[pinguim-budget](https://github.com/pinguiminvest/pinguim-budget)
+[Repositório pinguim-budget](https://github.com/pinguiminvestidor/pinguim-budget)
