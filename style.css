@@ -1,0 +1,59 @@
+/*
+ Styles for pinguiminvestidor.github.io
+ */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #50C1E6;
+    color: #223F42;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+a {
+    color: #1ea610;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #21B811;
+    text-decoration: underline;
+}
+
+header {
+    background: #50C1E6;
+    padding: 2em 1em;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: block;
+    padding: 1em;
+    background-color: #399FC1;
+    color: #E4F5FB;
+    margin-top: 4px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+header nav ul li a:hover {
+    background: #E4F5FB;
+    color: #399FC1;
+    text-decoration: none;
+}
+
+section#main {
+    padding: 2em;
+    background: #B5E2E7;
+}
+
+footer {
+    padding: 3em 1em;
+    text-align: center;
+}
