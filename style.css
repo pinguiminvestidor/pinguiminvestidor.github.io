@@ -20,6 +20,19 @@ a:hover {
     text-decoration: underline;
 }
 
+img {
+    display: inline-block;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+
+    img {
+        width: 100%;
+    }
+
+}
+
 header {
     background: #50C1E6;
     padding: 2em 1em;
