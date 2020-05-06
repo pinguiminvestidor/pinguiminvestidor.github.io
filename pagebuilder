@@ -4,22 +4,16 @@
 # template halves, and save the output to a given page.
 # 
 # Requires the Markdown Perl script (https://daringfireball.net/markdown) or
-# similar implementation to perform this wonderful hack.
+# similar implementation to perform this wonderful hack. 
+# But, yes, a hack indeed. Why aren't you using a CMS, man...
 #
-# USAGE: pagebuilder MARKDOWN_FILE
-# Where MARKDOWN_FILE is the page's content.
-# Use your shell's redirection (>) to save the file if you desire.
+# USAGE: just run ./pagebuilder and let it work its magic. It'll look for all
+# *.md files in the directory, sandwich their HTML equivalent along the
+# templates and save the content as a new .html file, which can be rendered.
 #
 # Copyright 2020 Pinguim Investidor. Licensed under the terms and conditions of
 # the  GNU GPL v3. See https://gnu.org/licenses for more information.
 #
-
-if [[ $# == 0 ]]
-then
-    echo "Error: missing contents from markdown file."
-    echo "Please specify one markdown file to act as content for your page."
-    exit 1
-fi
 
 if [[ -z $(which markdown) ]]
 then
@@ -28,6 +22,14 @@ then
     exit 1
 fi
 
-cat template_top.html
-markdown "$1"
-cat template_footer.html
+build() {
+    cat template_top.html
+    markdown "$1"
+    cat template_footer.html
+}
+
+for page in *.md
+do
+    build "$page" > ${page/md/html}
+    echo "Page ${page/md/html} created."
+done

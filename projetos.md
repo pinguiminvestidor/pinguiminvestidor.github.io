@@ -2,7 +2,7 @@
 
 Nesta página, apresento os sistemas e software que escrevi para auxiliar a gestão das minhas finanças pessoais e investimentos, e também na administração dos meus servidores e dispositivos Linux.
 
-Para mais detalhes, veja o meu [perfil no GitHub](https://github.com/pinguiminvestidor).
+Para mais detalhes, veja o meu [perfil no GitHub](https://github.com/pinguiminvestidor), onde todos os meus repositórios estão disponíveis.
 
 ### pinguim-bootstrap
 
