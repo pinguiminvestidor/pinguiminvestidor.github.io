@@ -1,7 +1,8 @@
 #!/bin/bash
 #
 # "Build" static html pages by sandwiching the markdown content with the two
-# template halves, and save the output to a given page.
+# template halves, and save the output to a given page. The <title> attribute
+# will be the first "H1" you find in the .md document.
 # 
 # Requires the Markdown Perl script (https://daringfireball.net/markdown) or
 # similar implementation to perform this wonderful hack. 
@@ -22,8 +23,14 @@ then
     exit 1
 fi
 
+findTitle() {
+    # pass $1 as a .md page with an H1 title.
+    cat "$1" | awk -F "# " '/^# / { print $2 }'
+}
+
 build() {
-    cat template_top.html
+    title=$(findTitle "$1")
+    cat template_top.html | sed "s/#title#/$title/g"
     markdown "$1"
     cat template_footer.html
 }
