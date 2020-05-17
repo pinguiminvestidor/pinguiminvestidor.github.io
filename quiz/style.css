@@ -1,0 +1,41 @@
+/* Styles for the quiz page */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    background: #afddf7;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin: 0;
+    padding: 1.5em 1em;
+}
+
+body section {
+    padding: 2em 1em;
+    background: #E1FFE6;
+}
+
+body footer {
+    text-align: center;
+    padding: 2em 1em;
+}
+
+button {
+    background: #3AC2FE;
+    padding: .7em;
+    border: 3px solid #1BA3DE;
+    font-size: .8em;
+    color: #E9F8FF;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #61CFFF;
+}
+
+button:active{
+    background: #0F99D6;
+}
